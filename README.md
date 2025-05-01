@@ -63,7 +63,7 @@ This project demonstrates scalable architecture, Stripe monetization, and role-b
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/yourproject.git
+git clone https://github.com/Panicz123456/multi-vendor-e-commerce-app.git
 
 # Install dependencies
 npm install
