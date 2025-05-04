@@ -1,10 +1,11 @@
 'use client'
 
+import { CustomCategory } from "@/lib/types";
 import { Category } from "@/payload-types"
 import Link from "next/link";
 
 interface Props {
-  category: Category,
+  category: CustomCategory,
   isOpen: boolean,
   position: { top: number; left: number }
 }
@@ -39,7 +40,7 @@ export const SubcategoryMenu = ({
           {category.subcategories?.map((subcategories: Category) => (
             <Link
               key={subcategories.slug}
-              href="/"
+              href={`/${category.slug}/${subcategories.slug}`}
               className="w-full text-left p-4 hover:bg-black hover:text-white flex justify-between items-center underline font-medium"
             >
               {subcategories.name}
@@ -47,6 +48,6 @@ export const SubcategoryMenu = ({
           ))}
         </div>
       </div>
-    </div>
+    </div >
   )
 }
