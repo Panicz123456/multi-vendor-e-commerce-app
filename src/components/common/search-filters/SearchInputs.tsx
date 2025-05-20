@@ -2,11 +2,11 @@
 
 import { ListFilterIcon, SearchIcon } from "lucide-react"
 import { Input } from "../../ui/input"
-import { CategoriesSidebar } from "./CategoriesSidebar"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { useTRPC } from "@/trpc/client"
 import { useQuery } from "@tanstack/react-query"
+import { CategoriesSideBar } from "./CategoriesSidebar"
 
 interface Props {
   disabled?: boolean
@@ -20,7 +20,7 @@ export const SearchInputs = ({ disabled }: Props) => {
 
   return (
     <div className="flex items-center gap-2 w-full">
-      <CategoriesSidebar open={open} onOpenChange={setIsOpen} />
+      <CategoriesSideBar open={open} onOpenChange={setIsOpen} />
       <div className="relative w-full">
         <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-neutral-500" />
         <Input className="pl-8" placeholder="Search products" disabled={disabled} />

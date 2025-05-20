@@ -6,8 +6,8 @@ import { CategoryDropdown } from "./CategoryDropdown"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { ListFilterIcon } from "lucide-react"
-import { CategoriesSidebar } from "./CategoriesSidebar"
 import { CategoriesGetManyOutput } from "@/modules/categories/types"
+import { CategoriesSideBar } from "./CategoriesSidebar"
 
 interface Props {
   data: CategoriesGetManyOutput
@@ -57,7 +57,7 @@ export const Categories = ({ data }: Props) => {
 
   return (
     <div className="relative w-full">
-      <CategoriesSidebar
+      <CategoriesSideBar
         open={isSidebarOpen}
         onOpenChange={setIsSidebarOpen}
       />
